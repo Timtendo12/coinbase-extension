@@ -1,0 +1,11 @@
+{
+  "name": "Coinbase Tools",
+  "version": "1.0.0",
+  "description": "Tools for Coinbase",
+  "manifest_version": 3,
+  "author": "Tim Slager",
+  "action":{
+    "default_popup": "src/pages/index.html",
+    "default_title": "Coinbase Tools"
+  }
+}
