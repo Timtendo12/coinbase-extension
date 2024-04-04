@@ -7,5 +7,13 @@
   "action":{
     "default_popup": "src/pages/index.html",
     "default_title": "Coinbase Tools"
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["src/scripts/coinbase-content.js"],
+      "matches": [
+        "https://www.coinbase.com/*"
+      ]
+    }
+  ]
 }
