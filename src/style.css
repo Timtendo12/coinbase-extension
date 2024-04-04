@@ -1,7 +1,13 @@
-body {
+html,body {
     padding: 0 !important;
     margin: 0 !important;
     height: 300px;
+    background-color: rgb(10, 11, 13);
+}
+
+p,h1 {
+    margin: 0;
+    color: white;
 }
 
 .header {
@@ -13,6 +19,7 @@ body {
     align-items: center;
     background-color: #1a48e8;
     padding: 5px;
+    color: white;
 }
 
 .settings {
@@ -25,7 +32,7 @@ body {
     background: transparent;
     text-underline: none;
     border: none;
-    color: black;
+    color: white;
 }
 
 .settings:hover {
@@ -54,10 +61,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%
+    width: 50%;
+    height: 150px;
+    gap: 10px;
 }
 
 .content-header {
     font-weight: bold;
     font-size: 14px;
+}
+
+.content-subtext {
+    font-size: 20px;
+    font-weight: bold;
 }

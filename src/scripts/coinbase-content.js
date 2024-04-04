@@ -14,21 +14,25 @@ waitForElm(`button[type=button]:has(span.cds-positionRelative-pagbhaq)`).then((e
 })
 
 function addHideButton(btnToClone) {
-    hideButton = btnToClone.cloneNode(true);
-    hideButton.style.marginRight = "10px";
-    hideButton.children[0].children[0].children[0].innerText = "Hide Total";
+    try {
+        hideButton = btnToClone.cloneNode(true);
+        hideButton.style.marginRight = "10px";
+        hideButton.children[0].children[0].children[0].innerText = "Hide Total";
 
-    // get div with data-test-id="topRight"
-    const btnParent = document.querySelector(`div.cds-3-_1ol1258`);
+        // get div with data-test-id="topRight"
+        const btnParent = document.querySelector(`div.cds-3-_1ol1258`);
 
-    //append hidebutton as second child
-    btnParent.insertBefore(hideButton, btnToClone);
+        //append hidebutton as second child
+        btnParent.insertBefore(hideButton, btnToClone);
 
-    // remove click event listener
-    hideButton.removeEventListener("click", null);
+        // remove click event listener
+        hideButton.removeEventListener("click", null);
 
-    // add click event listener to hide total
-    hideButton.addEventListener("click", ToggleTotal);
+        // add click event listener to hide total
+        hideButton.addEventListener("click", ToggleTotal);
+    } catch (e) {
+        console.error(e)
+    }
 }
 
 function ToggleTotal() {
